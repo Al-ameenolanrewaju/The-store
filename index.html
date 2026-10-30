@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMS - E-Millennial Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <div class="logo">EMS</div>
+
+    <nav>
+        <a href="#intro">Intro</a>
+        <a href="#about">About</a>
+        <a href="#shop">Shop</a>
+    </nav>
+
+    <div class="cart" id="cart-btn">
+        🛒 <span>0</span>
+    </div>
+</header>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+    <div class="hero-main">
+        <div class="hero-content">
+            <div class="hero-subtitle">THE</div>
+            <h1 class="hero-title">E-MILLENIAL<br>STORE</h1>
+        </div>
+
+        <img src="Project Files/Images/heroImage.png" alt="E-Millennial Store Hero">
+    </div>
+
+    <a href="#shop" class="hero-shopnow">SHOP NOW</a>
+</section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>E-Millennial Store is a hypothetical online store for gadgets
+            we believe every 'millennial' or 'Gen-Z' should have today.
+            We've got mobile phones, laptops, smartwatches and other
+            gadgets. Explore all our gadgets and choose the ones that
+            suit you</h2>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop">
+        <h2 class="section-title">OUR GADGETS</h2>
+        <div class="products-container">
+            <div class="product">
+                <img src="Project Files/Images/product1.png" alt="Samsung TV">
+                <h3>SAMSUNG TV</h3>
+                <button class="add-btn" data-name="Samsung Tv" data-price="50000">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="Project Files/Images/product2.png" alt="Pixel 4a">
+                <h3>PIXEL 4a</h3>
+                <button class="add-btn" data-name="Pixel 4a" data-price="250000">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="Project Files/Images/product3.png" alt="PS 5">
+                <h3>PS 5</h3>
+                <button class="add-btn" data-name="PS 5" data-price="300000">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="Project Files/Images/product4.png" alt="MacBook Air">
+                <h3>MACBOOK AIR</h3>
+                <button class="add-btn" data-name="MacBook Air" data-price="1000000">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="Project Files/Images/product5.png" alt="Apple Watch">
+                <h3>APPLE WATCH</h3>
+                <button class="add-btn" data-name="Apple Watch" data-price="200000">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="Project Files/Images/product6.png" alt="Air Pods">
+                <h3>AIR PODS</h3>
+                <button class="add-btn" data-name="Air Pods" data-price="150000">ADD TO CART</button>
+            </div>
+        </div>
+    </section>
+    <div id="cart-overlay" class="hidden">
+        <div id="cart-modal">
+            <h2>YOUR CART</h2>
+            <table>
+                <thead>
+                 <tr>
+                  <th>S/N</th>
+                  <th>item</th>
+                  <th>price</th>
+                  <th>quantity</th>
+                 </tr>
+                </thead>
+                <tbody id="cart-body">
+
+                </tbody>
+        </table>
+        <input type="text" id="name" placeholder="Your Name">
+<small class="error" id="name-error"></small>
+
+<input type="email" id="email" placeholder="Your Email">
+<small class="error" id="email-error"></small>
+
+<input type="tel" id="phone" placeholder="Your Phone Number">
+<small class="error" id="phone-error"></small>
+
+<div class="total-text">Total Amount to be Paid</div>
+<div class="total-amount" id="total">0</div>
+
+<div class="buttons">
+    <button class="btn continue" id="continue-shopping">Continue Shopping</button>
+    <button class="btn checkout" id="checkout-btn">Checkout</button>
+        </div>
+        </div>
+    </div>
+    <div id="success-overlay" class="success-overlay hidden">
+  <div class="success-box">
+    <div id="order-summary">
+  <h2>Payment Successful 🎉</h2>
+
+  <p><strong>Name:</strong> <span id="summary-name"></span></p>
+  <p><strong>Email:</strong> <span id="summary-email"></span></p>
+  <p><strong>Phone:</strong> <span id="summary-phone"></span></p>
+  <p><strong>Reference:</strong> <span id="summary-ref"></span></p>
+
+  <h3>Order Summary</h3>
+  <ul id="summary-items"></ul>
+
+  <h3>Total: ₦<span id="summary-total"></span></h3>
+  <button id="close-summary">Close</button>
+</div>
+    
+  </div>
+</div>
+    <!-- Footer -->
+    <footer>
+        <h2>EMS</h2>
+        <p>Designed and crafted by a Frontend Ninja</p>
+    </footer>
+    
+</body>
+<script src="script.js"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+</html>
